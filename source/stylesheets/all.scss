@@ -5,12 +5,12 @@
 /* everybody luvs 2 clearfix */
 .cf:before,
 .cf:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .cf:after {
-    clear: both;
+  clear: both;
 }
 
 body {
@@ -25,13 +25,15 @@ body {
   @extend .cf;
 }
 
-.image {
-  float: left;
-  max-width: 32%;
-  margin: 0.666665%;
-  img {
-    display: block;
-    height: auto;
-    width: 100%;
+#instagram
+  .image {
+    float: left;
+    max-width: 32%;
+    margin: 0.666665%;
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
   }
 }
