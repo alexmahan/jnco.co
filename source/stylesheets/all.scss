@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "compass";
+@import "compass/css3";
+
+/* everybody luvs 2 clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+body {
+  background: #fff;
+  font-family: sans-serif;
+  padding: 0.666665%;
+}
+
+.container {
+  max-width: 1600px;
+  @extend .cf;
+}
+
+.image {
+  float: left;
+  max-width: 32%;
+  margin: 0.666665%;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
