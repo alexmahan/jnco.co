@@ -20,7 +20,8 @@ body {
 }
 
 .container {
-  max-width: 1600px;
+  margin: 0 auto;
+  max-width: 1200px;
   @extend .cf;
 }
 
@@ -29,6 +30,7 @@ body {
   max-width: 32%;
   margin: 0.666665%;
   img {
+    display: block;
     height: auto;
     width: 100%;
   }
