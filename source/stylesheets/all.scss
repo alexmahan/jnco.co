@@ -1,6 +1,23 @@
 @charset "UTF-8";
 @import "compass";
 @import "compass/css3";
+@import "media-queries";
+
+$grey: #666666;
+$small: 600px;
+$smaller: 400px;
+
+@mixin small() {
+  @include screen($small) {
+    @content;
+  }
+}
+
+@mixin smaller() {
+  @include screen($smaller) {
+    @content;
+  }
+}
 
 /* everybody luvs 2 clearfix */
 .cf:before,
@@ -16,7 +33,7 @@
 body {
   background: #fff;
   font-family: sans-serif;
-  padding: 0.666665%;
+  padding: 2%;
 }
 
 .container {
@@ -25,15 +42,48 @@ body {
   @extend .cf;
 }
 
-#instagram
+h1 {
+  background: transparent url(../images/jnco-logo.png) center top no-repeat;
+  background-size: 50px 50px;
+  color: $grey;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 50px 0;
+  padding-top: 70px;
+  text-align: center;
+  width: 100%;
+  @include small() {
+    margin: 25px 0;
+  }
+}
+
+#instagram {
   .image {
     float: left;
-    max-width: 32%;
-    margin: 0.666665%;
+    max-width: 29.333%;
+    margin: 2%;
+    text-align: center;
+    text-decoration: none;
+    @include small() {
+      max-width: 46%;
+    }
+    @include smaller() {
+      max-width: 100%;
+      margin: 20px 0;
+    }
     img {
       display: block;
       height: auto;
       width: 100%;
+    }
+    small {
+      color: $grey;
+      display: block;
+      font-size: 12px;
+      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+      margin: 20px 0 0 0;
+      text-decoration: none;
     }
   }
 }

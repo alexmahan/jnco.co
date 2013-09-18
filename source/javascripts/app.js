@@ -14,8 +14,6 @@
                 var $instagram = $('#instagram'),
                     endpoint = 'https://api.instagram.com/v1/tags/jncocam/media/recent?access_token=' + this.instagramAccessToken + '';
 
-                // Get latest 12 images hashtagged 
-
                 $.ajax({
                     crossDomain: true,
                     dataType: 'jsonp',
@@ -24,7 +22,6 @@
                 .done(function(data, status, jqXHR) {
 
                     if (status == 'success') {
-                        console.log('sicess!');
                         $.each(data.data, function(index, image) {
                             var url = image.link,
                                 imageUrl = image.images.standard_resolution.url,
@@ -44,13 +41,13 @@
 
                             // Append the caption, if present
 
-                            // if (image.caption && image.caption.text) {
-                            //     $imageWrapper.append(
-                            //         $('<small>')
-                            //             .attr('class', 'caption')
-                            //             .text(image.caption.text)
-                            //     );
-                            // }
+                            if (image.caption && image.caption.from.username) {
+                                $imageWrapper.append(
+                                    $('<small>')
+                                        .attr('class', 'caption')
+                                        .text(image.caption.from.username)
+                                );
+                            }
 
                             // Write it to the page
 
