@@ -7,7 +7,8 @@
 
     jncoGrid: {
 
-      instagramAccessToken: '192731193.22c81c6.3d3f9b8ca1d24c2a8304767af4fbe6b3', // For 'alexshred420' user
+      // For 'alexshred420' user, need to figure out a way to not use this in production as requests are limited to 5000 per hour
+      instagramAccessToken: '192731193.22c81c6.3d3f9b8ca1d24c2a8304767af4fbe6b3',
 
       init: function() {
 
